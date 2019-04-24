@@ -3,7 +3,7 @@
 ## Setup with docker
 
 1. `cp .env.sample .env` (fill in env variables)
-2. `docker build dogefinder .`
+2. `docker build -t dogefinder .`
 3. `docker run -d dogefinder`
 
 ## Setup without docker (dev)
