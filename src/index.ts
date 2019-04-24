@@ -1,13 +1,14 @@
 import config, { Site } from './config';
 import axios from 'axios';
 import BPromise from 'bluebird';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { html } from "common-tags";
 import cron from 'node-cron';
 
 import mailgunJs from 'mailgun-js';
 
 const mailgun = mailgunJs({ apiKey: config.mailgun.key, domain: config.mailgun.domain });
+mkdirSync('cache'); // make sure that cache directory exists
 
 async function run(): Promise<void> {
   await BPromise.each(config.sites, checkSiteForChanges);
