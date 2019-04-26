@@ -37,10 +37,6 @@ export const config: Config = {
       url: "https://www.poodlerocks.com/puppies3"
     },
     {
-      name: "poutapaivan-blogspot",
-      url: "https://poutapaivan.blogspot.com/p/pentuja.html"
-    },
-    {
       name: "lumijoen-kennel",
       url: "https://lumijoenkennel.webnode.fi/maltasepuppy/"
     }
